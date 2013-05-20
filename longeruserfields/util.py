@@ -10,6 +10,6 @@ FIELDS_LENGTH_SETTINGS = {
 
 def get_field_length(field_name):
     setting_name = FIELDS_LENGTH_SETTINGS.get(field_name)
-    if settings_name and hasattr(settings, settings_name):
-        return getattr(settings, settings_name)
+    if setting_name and hasattr(settings, setting_name):
+        return getattr(settings, setting_name)
     return 255

@@ -1,3 +1,6 @@
 .DS_Store
 *.pyc
 .pypirc
+MANIFEST
+build
+dist

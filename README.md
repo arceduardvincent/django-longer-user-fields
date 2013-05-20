@@ -1,6 +1,6 @@
 `django-longer-user-fields` provides a migration and a monkeypatch to make the django auth.user fields longer, instead of the arbitrarily short 30 characters.
 
-It allows you to update the length of the ``username``, ``first_name``, ``last_name`` and ``email`` fields.
+It allows you to update the length of the ``username``, ``first_name`` and ``last_name`` fields.
 
 It's designed to be a simple include-and-forget project that makes a little headache go away.  Enjoy, and pull requests welcome!
 
@@ -36,7 +36,6 @@ settings.py
 MAX_USERNAME_LENGTH = 100  # optional, default is 255.
 MAX_FIRSTNAME_LENGTH = 80  # optional, default is 255.
 MAX_LASTNAME_LENGTH = 80   # optional, default is 255.
-MAX_EMAIL_LENGTH = 140     # optional, default is 255.
 ```
 
 

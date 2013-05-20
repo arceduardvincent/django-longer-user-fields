@@ -1,13 +1,13 @@
-#/usr/bin/env python
-import os
-from setuptools import setup, find_packages
-
-ROOT_DIR = os.path.dirname(__file__)
-SOURCE_DIR = os.path.join(ROOT_DIR)
+from distutils.core import setup
 
 setup(
-    name = "longerusername",
-    version = "0.4",
-    packages = find_packages(),
-    zip_safe = False,
+    name='django-longer-user-fields',
+    version='0.1.1',
+    author='Yukilas',
+    author_email='yukilas@gmail.com',
+    packages=['longeruserfields'],
+    url='http://pypi.python.org/pypi/django-longer-user-fields/',
+    license='LICENSE',
+    description='An app to easily provide longer fields for django User model',
+    long_description=open('README.md').read(),
 )

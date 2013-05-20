@@ -7,7 +7,7 @@ with open("README.rst") as file:
 
 setup(
     name='django-longer-user-fields',
-    version='0.1.3',
+    version='0.1.5',
     author='Yukilas',
     author_email='yukilas@gmail.com',
     packages=['longeruserfields'],

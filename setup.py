@@ -1,18 +1,32 @@
-from distutils.core import setup
+import os
+from setuptools import setup
 
+README = open(os.path.join(os.path.dirname(__file__), 'README.md')).read()
 
-with open("README.rst") as file:
-    long_description = file.read()
-
+# allow setup.py to be run from any path
+os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-longer-user-fields',
-    version='0.1.5',
+    version='0.1.7',
+    packages=['longeruserfields'],
+    include_package_data=True,
+    license='BSD License',
+    description='An app to easily provide longer fields for django User model.',
+    long_description=README,
+    url='http://pypi.python.org/pypi/django-longer-user-fields/',
     author='Yukilas',
     author_email='yukilas@gmail.com',
-    packages=['longeruserfields'],
-    url='http://pypi.python.org/pypi/django-longer-user-fields/',
-    license='LICENSE',
-    description='An app to easily provide longer fields for django User model',
-    long_description=long_description,
+    classifiers=[
+        'Environment :: Web Environment',
+        'Framework :: Django',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: BSD License',
+        'Operating System :: OS Independent',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 2.6',
+        'Programming Language :: Python :: 2.7',
+        'Topic :: Internet :: WWW/HTTP',
+        'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
+    ],
 )

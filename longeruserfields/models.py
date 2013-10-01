@@ -19,11 +19,11 @@ def patch_user_model(model):
         field = model._meta.get_field(field_name)
         field.max_length = get_field_length(field_name)
 
-    # patch model field validator because validator doesn't change if we change
-    # max_length
-    for v in field.validators:
-        if isinstance(v, MaxLengthValidator):
-            v.limit_value = get_field_length(field_name)
+        # patch model field validator because validator doesn't change if we change
+        # max_length
+        for v in field.validators:
+            if isinstance(v, MaxLengthValidator):
+                v.limit_value = get_field_length(field_name)
 
 
 from django.contrib.auth.models import User
